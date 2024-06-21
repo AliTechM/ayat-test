@@ -2,7 +2,7 @@
   "name": "ayat",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/AliTechM/ayat",
+  "homepage": "https://github.com/AliTechM/ayat-test",
   "dependencies": {
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
@@ -22,7 +22,7 @@
     "slick-carousel": "^1.8.1",
     "web-vitals": "^2.1.4",
     "yup": "^1.4.0"
-  },  
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
