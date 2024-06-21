@@ -1,0 +1,68 @@
+
+  .navLink > div svg {
+    color:#cccccc ;
+  }
+  .navLink>div{
+    color:black  ;
+  }
+  
+  .navLink > div:hover  svg ,.selected >div svg , .active >div svg{
+    color: #3b86ff  ;
+  }
+ 
+
+  .navLink {
+    text-decoration: none;
+  }
+.navLink > div{
+    text-decoration: none;
+    
+    border-radius: 25px 0 0 25px;
+    transition: color .5s;
+   
+}
+
+.navLink > div:hover ,.selected >div , .active >div {
+    color: #3b86ff;
+    background-color: #F5F6FA;
+}
+
+.navLink > div::after, .navLink > div::before 
+ {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: 0;
+    width: 20px;
+    height: 50px;
+    border-radius: 0 0 25px 0;
+    z-index: -1;
+}
+
+.navLink > div::before {
+    top: auto;
+    bottom: -50px;
+    border-radius: 0 25px 0 0;
+}
+
+.navLink > div:hover::after,
+.selected >div::after , 
+.active >div::after
+{
+    box-shadow: 0 25px 0 0 #F5F6FA;
+    z-index: unset;
+}
+
+.navLink > div:hover::before,
+.selected >div::before , 
+.active >div::before  {
+    box-shadow: 0 -25px 0 0 #F5F6FA;
+    z-index: unset;
+}
+
+
+
+
+
+
+

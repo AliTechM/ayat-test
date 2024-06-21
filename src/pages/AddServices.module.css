@@ -1,0 +1,42 @@
+.theParents:before {
+    content: '';
+    position: absolute;
+    background-color: #3b86ff;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    top: 0;
+    z-index: 1;
+    left: 37px;
+}
+
+.theParents {
+    position: relative;
+}
+
+
+
+.theParents:after{
+    content: '';
+    position: absolute;
+    background-color: #3b86ff;
+    width: 10px;
+    height: 10px;
+    left: 37px;
+    bottom: 0;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.theParents > li:before {
+    content: '';
+    width: 2px;
+    background: repeating-linear-gradient(transparent, transparent 4px, #c3daff 4px, #c3daff 8px);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -16px;
+    z-index: 0;
+}
+
+
