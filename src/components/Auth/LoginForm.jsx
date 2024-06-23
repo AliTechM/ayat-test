@@ -210,7 +210,7 @@ const LoginForm = () => {
           </Box>
           <Box sx={{ width: '100%', textAlign: 'center' ,position:'absolute',bottom:{md:'50px',xs:'5px'}}}>
             <Typography variant="body2">
-              By signing up you agree to our Privacy Policy and Terms.
+              By signing up you agree to our <a href='/privacy'>Privacy Policy</a> and <a href='/terms'>Terms</a>  .
             </Typography>
           </Box>
         </Grid>
