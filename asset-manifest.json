@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/AliTechM/ayat-test/static/css/main.55d54595.css",
-    "main.js": "/AliTechM/ayat-test/static/js/main.a3413ab9.js",
+    "main.js": "/AliTechM/ayat-test/static/js/main.ad76399f.js",
     "static/media/login.png": "/AliTechM/ayat-test/static/media/login.f0cd23897b75bc2b283e.png",
     "static/media/clinic.png": "/AliTechM/ayat-test/static/media/clinic.9759f71b306f60cd3225.png",
     "static/media/chart.svg": "/AliTechM/ayat-test/static/media/chart.eda79f301d48e96a8e5b4c32b4efa72a.svg",
@@ -15,10 +15,10 @@
     "static/media/slick.woff": "/AliTechM/ayat-test/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/AliTechM/ayat-test/index.html",
     "main.55d54595.css.map": "/AliTechM/ayat-test/static/css/main.55d54595.css.map",
-    "main.a3413ab9.js.map": "/AliTechM/ayat-test/static/js/main.a3413ab9.js.map"
+    "main.ad76399f.js.map": "/AliTechM/ayat-test/static/js/main.ad76399f.js.map"
   },
   "entrypoints": [
     "static/css/main.55d54595.css",
-    "static/js/main.a3413ab9.js"
+    "static/js/main.ad76399f.js"
   ]
 }
