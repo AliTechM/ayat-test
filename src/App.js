@@ -6,7 +6,7 @@ import Layout from './components/Layout/Layout';
 import NotFound from './pages/NotFound';
 import ProtecteRoutes from './components/Auth/ProtecteRoutes';
 
-const basename = "/AliTechM/ayat-test";
+
 
 const routers = createBrowserRouter([
   { path: "/", element: <LoginPage /> },
@@ -24,7 +24,7 @@ const routers = createBrowserRouter([
   },
   { path: "*", element: <NotFound /> }
 ], {
-  basename
+  
 });
 
 const App = () => {
