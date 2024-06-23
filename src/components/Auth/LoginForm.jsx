@@ -5,6 +5,7 @@ import logo from '../../assets/Logo.png';
 import doctor from '../../assets/login.png';
 import Logo from '../Common/logo';
 import ApiCall from './ApiCall';
+// import { login } from './authService'
 import CustomTextField from '../Common/CustomTextField';
 import {
   Container,
@@ -39,32 +40,40 @@ const LoginForm = () => {
 
   return (
     <Container
-      maxWidth="false"
-      sx={{
-        width: '90%',
-        maxWidth: '90%',
-        mr: 2,
-        ml: 2,
-        pr: 2,
-        pl: 2,
-      }}
-    >
-      <Grid container spacing={3} alignItems="center">
+    maxWidth={false}
+    disableGutters
+    sx={{
+      display: 'flex',
+      flexDirection: 'column',
+    }}
+  >
+      <Grid container spacing={3} alignItems="center" >
         <Grid item xs={12} md={7}>
-          <Logo src={doctor} alt="logo" width="82%" />
+          <Logo src={doctor} alt="doctor" width="70%"  margin="2px auto 0" />
         </Grid>
-        <Grid item xs={12} md={5} sx={{ position: 'relative', minHeight: '90vh', height: '100%', paddingTop: '10%' }}>
+        <Grid item xs={12} md={4} sx={{padding:'0' , position:'relative', 
+            height: {
+            xs: '75vh', 
+            md: '100vh',
+            },
+            display:'flex',
+            flexDirection:'column',
+            justifyContent: 'center'}} >
+          <Box>
           <Logo src={logo} alt="logo" width="45%" margin="0 auto" />
-          <Typography variant="subtitle1" gutterBottom sx={{ textAlign: 'center' }}>
+          <Typography variant="subtitle1" gutterBottom sx={{ textAlign: 'center' ,fontSize:{
+            xs: '.8rem', 
+            md: '1.2rem'} }}>
             Welcome back! Please login to your account.
           </Typography>
           <Formik
             initialValues={{ email: '', password: '', rememberMe: true }}
             validationSchema={validationSchema}
             onSubmit={(values, actions) => ApiCall(values, { ...actions, navigate, setLoading })}
+           
           >
             {({ errors, touched, handleChange, handleBlur, values, isSubmitting }) => (
-              <Box sx={{ width: '80%', mx: 'auto' }}>
+              <Box sx={{ width: '65%', mx: 'auto',mt:'40px' }}>
                 <Form>
                   <Box sx={{ position: 'relative', display: 'flex', alignItems: 'center', mb: 3 }}>
                     <Person
@@ -197,12 +206,15 @@ const LoginForm = () => {
               </Box>
             )}
           </Formik>
-          <Box sx={{ position: 'absolute', bottom: 0, width: '100%', textAlign: 'center' }}>
+         
+          </Box>
+          <Box sx={{ width: '100%', textAlign: 'center' ,position:'absolute',bottom:{md:'50px',xs:'5px'}}}>
             <Typography variant="body2">
               By signing up you agree to our Privacy Policy and Terms.
             </Typography>
           </Box>
         </Grid>
+        <Grid item xs={0} md={1}  ></Grid>
       </Grid>
       <Backdrop sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }} open={loading}>
         <CircularProgress color="inherit" />

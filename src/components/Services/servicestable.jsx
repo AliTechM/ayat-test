@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import ListSubheader from '@mui/material/ListSubheader';
 import List from '@mui/material/List';
 import ListItemButton from '@mui/material/ListItemButton';
@@ -21,7 +21,7 @@ import LinedHeader from '../Common/LinedHeader';
 import { useNavigate } from "react-router-dom";
 import EditModal from '../Util/Edit';
 import DeleteDialog from '../Util/Deleting';
-import { rows as initialRows } from '../../data';
+import { DataContext } from '../../Context/DataContext';
 
 const NestedList = ({ data, level = 0, onEdit, onDelete }) => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -75,7 +75,7 @@ export default function ServicesTable() {
   const [editModalOpen, setEditModalOpen] = useState(false);
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
   const [selectedItem, setSelectedItem] = useState(null);
-  const [rows, setRows] = useState(initialRows);
+  const { rows, setRows } = useContext(DataContext);
 
   const openAddService = () => {
     navigate("/home/services/add");

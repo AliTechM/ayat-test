@@ -12,7 +12,7 @@ const ServicesPage = () => {
       <ServicesTable />
       <ProductSlider />
     </Grid>
-    <Grid xs={0} md={1}></Grid>
+    <Grid item xs={0} md={1}></Grid>
     <Grid item xs={12} md={3} sx={{ mb: 3 }}>
       <ContactCard />
     </Grid>

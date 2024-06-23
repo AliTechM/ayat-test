@@ -9,6 +9,7 @@ import NotFound from './pages/NotFound';
 import ProtecteRoutes from './components/Auth/ProtecteRoutes';
 
 const App = () => {
+  
   const routers= createBrowserRouter([
     {path:"/", element:<LoginPage/>},
     {element: <ProtecteRoutes/>,

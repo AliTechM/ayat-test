@@ -3,9 +3,13 @@ import axios from 'axios';
 const ApiCall = async (values, { setSubmitting, setErrors, navigate, setLoading }) => {
   setLoading(true); 
   try {
-    const response = await axios.post('http://localhost:5000/auth/login', {
+    const response = await axios.post('https://dummyjson.com/auth/login', {
       username: values.email,
       password: values.password
+    }, {
+      headers: {
+        'Content-Type': 'application/json'
+      }
     });
 
     if (response.data && response.data.token) {
